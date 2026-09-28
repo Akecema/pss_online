@@ -13,31 +13,28 @@
  */
 ?>
  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8') ?>" method="post" id="loginform" class="form-vertical" >
-				 <div class="control-group normal_text"> 
-           
-				   <font size="5" color="#FFFFFF">Production Support System Online</font>
-				 </div>
+				 <h2 class="pss-title">Welcome to the <strong>PSS Portal</strong></h2>
                 <!--<div class="control-group">-->
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="icon-user"> </i></span><input name="username" type="text" placeholder="Username" />
+                            <span class="add-on bg_lg"><i class="icon-user"> </i></span><input name="username" type="text" placeholder="Username" autocomplete="username" />
                         </div>
                     </div>
                <!-- </div>-->
                 <!--<div class="control-group">-->
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input name="pass" type="password" placeholder="Password" />
+                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input name="pass" type="password" placeholder="Password" autocomplete="current-password" />
                         </div>
                     </div>
                 <!--</div>-->
                 <div class="form-actions">
                     <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Forgot password?</a></span>
-                    <span class="pull-right"><input name="submit" type="submit" value="LOGIN" class="btn btn-success"/></span>
+                    <span class="pull-right"><input name="submit" type="submit" value="Sign in" class="btn btn-success"/></span>
                 </div>
             </form>
   <form id="recoverform" action="forgot_password.php" class="form-vertical" data-remote="true" method="post">
-				<p class="normal_text">Enter your username and e-mail address below.</p>
+				<p class="pss-note">Enter your username and e-mail address below.</p>
 				
                     <div class="controls">
                         <div class="main_input_box">

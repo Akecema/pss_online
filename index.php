@@ -26,8 +26,10 @@ include 'con-dbcIPSB.php';
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" href="css/matrix-login.css" />
+        <link rel="stylesheet" href="css/pss-login.css" />
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="scripts/thickbox.css" type="text/css" media="screen" />
 		<style type="text/css">
 		body,td,th {
@@ -53,9 +55,14 @@ body {
 	include 'ckies-brw.php';
 	
 	?>    </head>
-    <body> 
-    <p align="center"> <img src="set_upload/<?php echo $filename;  ?>" /><br>
-    </p>
+    <body class="pss-login"> 
+    <div class="pss-shell">
+    <div class="pss-hero">
+        <div class="pss-brand"><img src="set_upload/<?php echo h($filename); ?>" alt="" /></div>
+        <h1>PSS</h1>
+        <p class="pss-sub">Production<span>Support System</span></p>
+    </div>
+    <div class="pss-panel">
     <?php 
 
  include "ckies-aut_frst.php";
@@ -83,6 +90,8 @@ body {
  } 
 
  ?>  
+    </div>
+    </div>
 <script src="js/jquery.min.js"></script>  
 <script src="js/matrix.login.js"></script> 
 <script src="js/excanvas.min.js"></script> 
