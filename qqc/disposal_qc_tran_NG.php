@@ -335,6 +335,7 @@ $rs = mysqli_query($dbc, $query);   //run the query.
                 <tr>
                 <th>No.</th> 
                 <th>Document No.</th>
+                <th>Disposal Document Date</th>
                 <th>Status</th>
                 <th colspan="3">Action</th>
                 </tr>
@@ -355,6 +356,7 @@ $rs = mysqli_query($dbc, $query);   //run the query.
                 <tr class="gradeX">
                 <td width="78"><?php echo $no; ?></td>
                 <td width="324"><?php echo h($row["doc_disposal_no"]); ?></td>
+                <td width="140"><?php echo (!empty($row["date_disposal"]) && strtotime($row["date_disposal"]) !== false) ? h(date('d-m-Y', strtotime($row["date_disposal"]))) : ''; ?></td>
                 <td width="158"><?php echo h($row["status_disposal"]); ?></td>
                 <td width="93"> <?php 
 				
